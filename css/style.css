@@ -48,6 +48,14 @@ button.bg-alt:hover {
   background-color: hsla(28, 91%, 52%, 0.8);
 }
 
+button.bg-main {
+  margin: 5px 0;
+}
+
+button.bg-alt {
+  margin: 5px 0;
+}
+
 .main-title {
   position: relative;
 }
@@ -121,18 +129,21 @@ span.bottom-shadow {
     position: relative;
   }
   .header ul.nav {
-    display: none !important;
     position: absolute;
     width: 100%;
-    min-height: 100%;
+    height: calc(100vh - 88px);
     background-color: var(--main-color);
     flex-direction: column;
-    left: 0;
+    left: -100%;
     top: 88px;
     z-index: 555;
+    transition: var(--main-transition);
+  }
+  .header ul.nav li a {
+    color: #fff;
   }
   .header .show {
-    display: block !important;
+    left: 0 !important;
   }
   .header .bars {
     display: block;
@@ -171,9 +182,30 @@ span.bottom-shadow {
   z-index: -5555;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 440px) {
   .home .image .img {
-    width: 200px;
+    max-width: 300px;
+    height: 300px;
+  }
+  .home svg {
+    bottom: 0;
+  }
+}
+@media (max-width: 440px) {
+  .home .image .img {
+    max-width: 300px;
+    height: 300px;
+  }
+  .home svg {
+    bottom: 0;
+  }
+}
+@media (max-width: 340px) {
+  .home {
+    min-height: auto !important;
+  }
+  .home .image .img {
+    max-width: 200px;
     height: 200px;
   }
 }
@@ -207,6 +239,10 @@ span.bottom-shadow {
 @media (max-width: 992px) {
   .about .box {
     flex-direction: column;
+    width: 90% !important;
+  }
+  .about .box .info {
+    padding: 20px !important;
   }
   .about img {
     display: block;
@@ -258,6 +294,12 @@ span.bottom-shadow {
   opacity: 0.5;
 }
 
+@media (max-width: 310px) {
+  .services .card {
+    width: auto;
+    height: auto;
+  }
+}
 .resume .box {
   box-shadow: hsla(175, 87%, 40%, 0.267) 0px 10px 45px -3px, hsla(175, 87%, 40%, 0.267) 0px 4px 45px -2px;
 }
