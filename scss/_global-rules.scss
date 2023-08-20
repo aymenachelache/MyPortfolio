@@ -54,10 +54,12 @@ button.bg-main {
 
 button.bg-alt {
     margin: 5px 0;
-}    
+}
+
 // Main Title
 .main-title {
     position: relative;
+
     &::before,
     &::after {
         content: '';
@@ -67,19 +69,23 @@ button.bg-alt {
         transform: translateX(-50%);
         border-radius: 6px;
     }
+
     &::before {
         width: 210px;
         height: 2px;
         bottom: -30px;
     }
+
     &::after {
         width: 40px;
         height: 10px;
         bottom: -35px;
     }
+
     & h1 {
         font-weight: 800 !important;
     }
+
     & span {
         letter-spacing: 3px;
     }
@@ -94,6 +100,7 @@ span.top-shadow {
     box-shadow: 0 10px 12px 0px hsl(175, 87%, 40%, 0.5);
     transform: rotate(-2deg);
 }
+
 span.bottom-shadow {
     display: block;
     width: 100%;

@@ -47,6 +47,7 @@
             top: 88px;
             z-index: 555;
             transition: var(--main-transition);
+
             li a {
                 color: #fff;
             }
@@ -109,11 +110,13 @@
                 height: 300px;
             }
         }
+
         svg {
             bottom: 0;
         }
     }
 }
+
 @media (max-width: 440px) {
     .home {
         .image {
@@ -122,14 +125,17 @@
                 height: 300px;
             }
         }
+
         svg {
             bottom: 0;
         }
     }
 }
+
 @media (max-width: 340px) {
     .home {
         min-height: auto !important;
+
         .image {
             .img {
                 max-width: 200px;
@@ -178,10 +184,12 @@
         .box {
             flex-direction: column;
             width: 90% !important;
+
             .info {
                 padding: 20px !important;
             }
         }
+
         img {
             display: block;
             margin: 0 auto;
@@ -248,6 +256,7 @@
         }
     }
 }
+
 @media (max-width: 310px) {
     .services {
         .card {
@@ -263,9 +272,11 @@
 
     .box {
         box-shadow: hsla(175, 87%, 40%, 0.267) 0px 10px 45px -3px, hsla(175, 87%, 40%, 0.267) 0px 4px 45px -2px;
+
         ul {
             position: relative;
             padding: 10px 0;
+
             &::before {
                 content: '';
                 position: absolute;
@@ -313,10 +324,12 @@
 
         }
     }
+
     .description {
         width: 60% !important;
         position: relative;
         padding: 20px 0 0;
+
         &::before {
             content: '';
             position: absolute;
@@ -326,8 +339,10 @@
             height: 100%;
             background-color: var(--main-color);
         }
+
         .skill {
             position: relative;
+
             &::before {
                 content: '';
                 position: absolute;
@@ -338,6 +353,7 @@
                 border-radius: 50%;
                 background-color: var(--main-color);
             }
+
             .years {
                 padding: 2px 15px;
                 border-radius: 50px;
@@ -346,10 +362,12 @@
     }
 
 }
+
 @media (max-width: 790px) {
     .resume {
         .container {
             flex-direction: column;
+
             .description {
                 width: 90% !important;
                 margin-top: 40px;
@@ -364,16 +382,19 @@
         li {
             cursor: pointer;
             transition: var(--main-transition);
-        &.active {
-            color: #fff;
-            background-color: var(--main-color);
-            border-radius: 50px;
-        }
-        &:not(.active):hover {
-            color: var(--main-color);
-        }
+
+            &.active {
+                color: #fff;
+                background-color: var(--main-color);
+                border-radius: 50px;
+            }
+
+            &:not(.active):hover {
+                color: var(--main-color);
+            }
         }
     }
+
     .box {
         padding: 5px;
         overflow: hidden;
@@ -381,6 +402,7 @@
         background-color: var(--main-color);
         cursor: pointer;
     }
+
     .box::before {
         content: attr(data-work);
         width: 0;
@@ -397,6 +419,7 @@
         color: transparent;
         transition: 0.3s;
     }
+
     .box:hover::before {
         width: calc(100% - 10px);
         color: white;
@@ -408,6 +431,7 @@
     .maps {
         position: relative;
         height: 100vh;
+
         iframe {
             position: absolute;
             width: 100%;
@@ -416,6 +440,7 @@
             top: 0;
             z-index: -99;
         }
+
         .form {
             position: absolute;
             width: 40%;
@@ -426,9 +451,11 @@
             padding: 20px;
             box-shadow: hsla(175, 87%, 40%, 0.267) 0px 10px 25px -3px, hsla(175, 87%, 40%, 0.267) 0px 4px 25px -2px;
             z-index: 99;
+
             h2 {
                 font-weight: 800;
             }
+
             input,
             textarea {
                 padding: 10px;
@@ -436,10 +463,12 @@
                 border: none;
                 box-shadow: hsla(175, 87%, 40%, 0.267) 0px 10px 25px -3px, hsla(175, 87%, 40%, 0.267) 0px 4px 25px -2px;
             }
+
             input:focus,
             textarea:focus {
                 outline: none;
             }
+
             textarea {
                 margin-bottom: 20px;
                 height: 200px;
@@ -448,11 +477,13 @@
         }
     }
 }
+
 @media (max-width: 767px) {
     .contactus {
         .maps {
             height: auto;
             padding: 30px 0;
+
             .form {
                 position: relative;
                 width: 90%;
@@ -472,19 +503,24 @@ footer {
         font-weight: 600;
         letter-spacing: 2px;
     }
+
     .contact ul svg {
         width: 20px;
         height: 20px;
     }
+
     .facebook {
         background-color: #1877f2;
     }
+
     .twitter {
         background-color: #1da1f2;
     }
+
     .linkedin {
         background-color: #0077b5;
     }
+
     .youtube {
         background-color: #ff0000;
     }

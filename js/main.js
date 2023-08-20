@@ -6,7 +6,6 @@ let nav = document.querySelector("ul.nav");
 let header = document.querySelector(".header");
 
 function navBar() {
-    console.log(nav.classList.contains("d-flex"));
     if (nav.classList.contains("show")) {
         nav.classList.remove("show");
     } else {
