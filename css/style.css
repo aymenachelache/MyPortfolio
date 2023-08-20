@@ -147,6 +147,7 @@ span.bottom-shadow {
   }
   .header .bars {
     display: block;
+    padding: 0 16px;
     cursor: pointer;
   }
 }
