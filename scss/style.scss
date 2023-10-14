@@ -1,10 +1,35 @@
 // Import Global Rules
 @use './global-rules' as *;
 
+// Up Botton
+.up {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px;
+    background-color: var(--alt-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+
+    svg {
+        color: #fff;
+    }
+}
+
 
 // Header
 .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
     box-shadow: 3px 4px 35px #0dbfb044;
+    background-color: #fff;
 
     .logo {
         cursor: pointer;
@@ -89,7 +114,6 @@
             border-radius: 50%;
             background-color: #fff;
             background-image: url('../imgs/home.jpg');
-            background-position: -25px;
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -294,6 +318,9 @@
                 padding: 10px 0;
                 position: relative;
                 cursor: pointer;
+                transition: var(--main-transition);
+                display: flex;
+                align-items: center;
 
                 &::before {
                     content: '';
@@ -308,7 +335,8 @@
                 }
             }
 
-            li.active {
+            li.active,
+            li:hover {
                 color: #fff;
                 background-color: var(--main-color);
                 border-radius: 0 20px 20px 0;
@@ -327,9 +355,15 @@
     }
 
     .description {
-        width: 60% !important;
+        width: 70% !important;
+        min-height: 150px;
         position: relative;
         padding: 20px 0 0;
+
+        span {
+            width: 110px;
+            white-space: nowrap;
+        }
 
         &::before {
             content: '';
